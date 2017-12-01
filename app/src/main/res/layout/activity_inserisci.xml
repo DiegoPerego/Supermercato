@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="diego.supermercato.InserisciActivity">
+
+    <TextView
+        android:id="@+id/tInserisci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:fontFamily="serif-monospace"
+        android:text="Inserisci"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:textStyle="italic" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tInserisci"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:entries="@array/product_array" />
+
+    <EditText
+        android:id="@+id/eMarca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ePrezzo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="81dp"
+        android:ems="10"
+        android:hint="Marca Prodotto"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/ePrezzo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bInserisci"
+        android:layout_alignStart="@+id/eMarca"
+        android:layout_marginBottom="36dp"
+        android:ems="10"
+        android:hint="Prezzo"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/bInserisci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="27dp"
+        android:text="Inserisci"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/iItem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false" />
+    </RelativeLayout>
+</RelativeLayout>
